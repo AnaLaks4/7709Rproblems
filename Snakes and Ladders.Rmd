@@ -1,0 +1,48 @@
+---
+title: "Snakes and Ladders"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+SnL<-function(){
+  m<-0
+while(m<=25){
+  if(m == 3){
+    m<-11
+  }
+  if(m==6){
+    m<-17
+  }
+  if(m==9){
+    m<-18
+  }
+  if(m == 10){
+    m<- 12
+  }
+  if(m==14){
+    m<-4
+  }
+  if(m==19){
+    m<-8
+  }
+  if(m==22){
+    m<-20
+  }
+  if(m==24){
+    m<-16
+  }
+
+  print(m)
+  m<- m+ sample(1:6,1)
+  
+}
+}
+
+SnL()
+```
+
